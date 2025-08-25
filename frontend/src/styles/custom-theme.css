@@ -1,0 +1,464 @@
+/* ---------- Color Variables ---------- */
+:root {
+    --primary-color: #041E42; /* Deep Navy Blue */
+    --accent-color: #A89968; /* Gold */
+    --text-light: #ffffff;
+    --background-color: #f8f9fa; /* Light gray background */
+}
+
+/* ---------- Global Styles ---------- */
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--text-light);
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background-color: var(--primary-color) !important;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--accent-color) !important;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+}
+
+/* ---------- Main Content Box ---------- */
+.content-box {
+    background: var(--primary-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* ---------- Title and Subtitle ---------- */
+.themed-title {
+    color: var(--text-light);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.themed-subtitle {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* ---------- Buttons ---------- */
+.custom-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    font-weight: bold;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #8c7f58;
+    color: var(--text-light);
+}
+
+.custom-button-outline {
+    background: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.custom-button-outline:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* ---------- Button Row (Actions) ---------- */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.button-row .btn {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.button-row .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ---------- Inputs & Input Groups ---------- */
+.input-group {
+    margin: 20px auto;
+    max-width: 400px;
+    display: flex;
+}
+
+.input-group .form-control {
+    border: 2px solid var(--primary-color);
+    border-radius: 0.375rem 0 0 0.375rem;
+    height: 50px;
+}
+
+.input-group .btn {
+    border: none;
+    border-radius: 0 0.375rem 0.375rem 0;
+    height: 50px;
+    font-weight: bold;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-left: 2px solid black;
+}
+
+.input-group .btn:hover {
+    background-color: #8c7f58;
+    color: var(--text-light);
+}
+
+/* ---------- Player Table ---------- */
+.list-group-item {
+    background: transparent;
+    color: var(--text-light);
+    border: 1px solid var(--accent-color);
+}
+
+.active-player {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ---------- Cards ---------- */
+.card-image {
+    width: 70px;
+    height: 100px;
+    border-radius: 8px;
+    border: 1px solid var(--accent-color);
+}
+
+.cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* ---------- Special Alerts ---------- */
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* ---------- Game Table Container ---------- */
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.themed-box {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: 2px solid var(--accent-color);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+/* ---------- Turn and Action Highlight ---------- */
+.your-turn-text {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ---------- Centered Box Content ---------- */
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* ---------- Poker Table Layout ---------- */
+.dark-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.poker-table {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(circle at center, var(--primary-color) 40%, #000000 100%);
+    border: 6px solid var(--accent-color);
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.player-spot {
+    position: absolute;
+    width: 110px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.player-box {
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 8px;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.player-box.active {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.player-box.folded {
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.empty-spot {
+    color: #999;
+    font-style: italic;
+}
+
+/* Player positions around the table */
+.spot-0 { top: 10px; left: 50%; transform: translateX(-50%); }
+.spot-1 { top: 60px; left: 85%; transform: translateX(-50%); }
+.spot-2 { top: 160px; left: 100%; transform: translateX(-50%); }
+.spot-3 { bottom: 60px; left: 85%; transform: translateX(-50%); }
+.spot-4 { bottom: 10px; left: 50%; transform: translateX(-50%); }
+.spot-5 { bottom: 60px; left: 15%; transform: translateX(-50%); }
+.spot-6 { top: 160px; left: 0%; transform: translateX(-50%); }
+.spot-7 { top: 60px; }
+
+/* ---------- Pot Display (Above Community Cards) ---------- */
+.pot-display {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 6px 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ---------- Community Cards (Centered) ---------- */
+.community-cards {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    gap: 10px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* ---------- Chat Bubble ---------- */
+.chat-bubble {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Action Buttons ---------- */
+.raise-slider-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+}
+
+.raise-slider-container input[type="range"] {
+    width: 300px;
+}
+
+.raise-slider-container button {
+    margin-top: 5px;
+    padding: 0.5rem 1.2rem;
+    background: var(--primary-color);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.raise-slider-container button:hover:not(:disabled) {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.raise-slider-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.styled-action-button {
+    margin: 5px;
+    padding: 0.5rem 1.2rem;
+    background: var(--primary-color);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.styled-action-button:hover:not(:disabled) {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.styled-action-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ---------- Center Message ---------- */
+.table-center-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 16px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 5;
+}
+
+/* Active player glow + pulse */
+.player-box.active {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    box-shadow: 0 0 15px 4px var(--accent-color);
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px 2px var(--accent-color); }
+    50% { box-shadow: 0 0 15px 6px var(--accent-color); }
+    100% { box-shadow: 0 0 10px 2px var(--accent-color); }
+}
+
+/* Dealer button */
+.dealer-button {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Flip Card Animation ---------- */
+.flip-card {
+    perspective: 1000px;
+    width: 70px;
+    height: 100px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+.flip-card.reveal .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+}
+
+.flip-card-front {
+    background-color: #041E42;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills entire area, even if it means cropping a little */
+    border-radius: 8px;
+}
+
